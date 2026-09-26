@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="logo"><span class="material-symbols-outlined">school</span></div>
+      <div>
+        <h1>Student Management System</h1>
+        <p class="sub">Kelola data siswa: tambah, ubah, dan hapus</p>
+      </div>
+    </div>
+    <div class="stat"><small>Total siswa</small><b id="total">0</b></div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search">
+      <span class="material-symbols-outlined">search</span>
+      <input type="text" id="q" placeholder="Cari NIS, nama, atau kelas...">
+    </div>
+    <span class="pill wait" id="pill">Belum fetch</span>
+    <button class="ico" id="refresh" title="Muat ulang"><span class="material-symbols-outlined">refresh</span></button>
+    <button class="btn btn-primary" id="btnAdd"><span class="material-symbols-outlined">person_add</span>Tambah Siswa</button>
+  </div>
+
+  <div class="meta" id="meta"></div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>NIS</th>
+          <th>Nama</th>
+          <th>Kelas</th>
+          <th>Jurusan</th>
+          <th>Alamat</th>
+          <th style="text-align:right">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <tr class="empty-row"><td colspan="6">Memuat data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="modal" id="modal">
+  <form class="sheet" id="form" autocomplete="off">
+    <div class="sheet-head">
+      <h3 id="modalTitle">Tambah Siswa</h3>
+      <button type="button" class="ico" id="btnClose" aria-label="Tutup"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <input type="hidden" id="sid">
+
+    <div class="field">
+      <label for="nis">NIS</label>
+      <div class="wrapin"><span class="material-symbols-outlined">badge</span><input type="text" id="nis" placeholder="NIS Siswa" style="padding-left:42px"></div>
+    </div>
+
+    <div class="field">
+      <label for="nama">Nama Lengkap</label>
+      <div class="wrapin"><span class="material-symbols-outlined">person</span><input type="text" id="nama" placeholder="Nama siswa" style="padding-left:42px"></div>
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label for="kelas">Kelas</label>
+        <input type="text" id="kelas" placeholder="Kelas">
+      </div>
+      <div class="field">
+        <label for="jurusan">Jurusan</label>
+        <input type="text" id="jurusan" placeholder="Jurusan">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="alamat">Alamat</label>
+      <div class="wrapin"><span class="material-symbols-outlined">home</span><input type="text" id="alamat" placeholder="Alamat siswa" style="padding-left:42px"></div>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn btn-ghost" id="btnCancel">Batal</button>
+      <button type="submit" class="btn btn-primary">Simpan</button>
+    </div>
+  </form>
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
