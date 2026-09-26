@@ -1,0 +1,334 @@
+{
+  "info": {
+    "_postman_id": "dba1bcdc-fdc8-421b-a863-c5d57b723417",
+    "name": "RestAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52117580"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "GetDataUser",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJtZWx2aW5AZ21haWwuY29tIiwiaWF0IjoxNzkwMjUxNzY4LCJleHAiOjE3OTAyNTUzNjh9.tX8yzDHyMWZ8O---ScZ4paF1DPx1CyMA_YIDH2xadRw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/user",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetDataUserByID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJtZWx2aW5AZ21haWwuY29tIiwiaWF0IjoxNzkwMjUxNzY4LCJleHAiOjE3OTAyNTUzNjh9.tX8yzDHyMWZ8O---ScZ4paF1DPx1CyMA_YIDH2xadRw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/user/12",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "user",
+                "12"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PostData",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/user",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutData",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"okta\",\r\n    \"email\": \"okta@gmail.com\",\r\n    \"password\": \"111111\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/user/13",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "user",
+                "13"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteData",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{host}}:{{port}}/user/8",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "user",
+                "8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJtZWx2aW5AZ21haWwuY29tIiwiaWF0IjoxNzkwMjUxNzY4LCJleHAiOjE3OTAyNTUzNjh9.tX8yzDHyMWZ8O---ScZ4paF1DPx1CyMA_YIDH2xadRw",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"melvin@gmail.com\",\r\n    \"password\": \"melvincantik\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/login",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Kelas",
+      "item": [
+        {
+          "name": "GetDataKelas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{(host)} : {(port)}/kelas",
+              "host": [
+                "{(host)} "
+              ],
+              "port": " {(port)}",
+              "path": [
+                "kelas"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Siswa",
+      "item": [
+        {
+          "name": "GetSiswa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}"
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/api/siswa",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "api",
+                "siswa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetSiswaById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}"
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/api/siswa/1",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "api",
+                "siswa",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PostSiswa",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}"
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/api/siswa",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "api",
+                "siswa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PutSiswa",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}"
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/api/siswa/1",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "api",
+                "siswa",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteSiswa",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nama\": \"nopi\",\r\n    \"email\": \"nopi@gmail.com\",\r\n    \"password\": \"anjayyyy\"\r\n}"
+            },
+            "url": {
+              "raw": "{{host}}:{{port}}/siswa/3",
+              "host": [
+                "{{host}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "siswa",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
